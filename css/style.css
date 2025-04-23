@@ -188,7 +188,56 @@ h6 {
   margin: 0;
   max-height: 40px;
 }
+/* Container Flex Setup */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
+/* Logo General Style */
+.logo img {
+  max-height: 70px;
+  height: auto;
+  width: auto;
+}
+
+/* Responsive for Small Screens */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .logo img {
+    max-height: 50px;
+  }
+
+  #nav-menu-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+.left-logo {
+  margin-right: auto;
+}
+
+.right-logo {
+  margin-left: auto;
+}
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -469,7 +518,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #intro {
   width: 100%;
   height: 100vh;
-  background: url(../img/intro-bg.jpg) top center;
+  background: url(../img/Banners-03.jpg) top center;
   background-size: cover;
   overflow: hidden;
   position: relative;
