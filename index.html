@@ -62,9 +62,10 @@
         </ul>
       </nav>
       <!-- Right Logo -->
-      <div class="logo right-logo">
+      <div class="right-logo">
         <a href="#intro"><img src="img/qatif.png" alt="Right Logo" /></a>
       </div>
+
     </div>
   </header>
 
@@ -76,8 +77,28 @@
     <div class="intro-container wow fadeIn">
       <h1 class="mb-4 pb-0"><span>International Hematology</span><br>& Hemostasis Conference</h1>
       <p class="mb-4 pb-0">29 April -1 May, Qasr Al Nakheel Hall, Dammam</p>
-      <a href="#" class="venobox play-btn mb-4" data-vbtype="video"
-        data-autoplay="true"></a>
+<!--      <a href="#" class="venobox play-btn mb-4" data-vbtype="video"-->
+<!--        data-autoplay="true"></a>-->
+<!--      <a href="img/promo.mp4" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true">-->
+        <a class="venobox play-btn mb-4"
+           data-vbtype="inline"
+           data-autoplay="true"
+           href="#promo-video">
+          <i class="fa fa-play"></i>
+        </a>
+      <div style="display: none;">
+        <div id="promo-video">
+          <video style="width: 100%; height: auto; max-height: 70vh;" controls autoplay>
+            <source src="img/promo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+
+<!--        <i class="fa fa-play"></i>-->
+<!--      </a>-->
+
       <a href="#about" class="about-btn scrollto">About The Event</a>
     </div>
   </section>
@@ -1674,7 +1695,12 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong>TheEvent</strong>. All Rights Reserved
+
+        &copy; Copyright
+        <a href="#"> Eastern Community </a> All Rights Reserved.
+        <br>
+        <span class="powered-by">Powered by <a href="https://afaq-lms.com/en/homepage">AFAQ Health Education </a>
+        </span>
       </div>
       <div class="credits">
         <!--
@@ -1683,12 +1709,12 @@
           Licensing information: https://bootstrapmade.com/license/
           Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=TheEvent
         -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Designed by <a href="https://afaq-lms.com/en/homepage">AFAQ Technical Team</a>
       </div>
     </div>
   </footer><!-- #footer -->
 
-  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+<!--  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>-->
 
   <!-- JavaScript Libraries -->
   <script src="lib/jquery/jquery.min.js"></script>
@@ -1706,6 +1732,43 @@
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
+  <script>
+    var url = 'https://wati-integration-prod-service.clare.ai/v2/watiWidget.js?16934';
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = url;
+    var options = {
+      "enabled":true,
+      "chatButtonSetting":{
+        "backgroundColor":"#ffffff",
+        "ctaText":"Chat with AFAQ",
+        "borderRadius":"25",
+        "marginLeft": "0",
+        "marginRight": "20",
+        "marginBottom": "20",
+        "ctaIconWATI":true,
+        "position":"right"
+      },
+      "brandSetting":{
+        "brandName":"AFAQ",
+        "brandSubTitle":"undefined",
+        "brandImg":"https://afaq-lms.com/afaq/imgs/Logo-Type-1v-2.png",
+        "welcomeText":"Hi there!\nHow can I help you?",
+        "messageText":"Hello, %0A I have a question about {{page_link}}",
+        "backgroundColor":"#ffffff",
+        "ctaText":"Chat with AFAQ Health Education",
+        "borderRadius":"25",
+        "autoShow":false,
+        "phoneNumber":"966506986979"
+      }
+    };
+    s.onload = function() {
+      CreateWhatsappChatWidget(options);
+    };
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
+  </script>
 </body>
 
 </html>
