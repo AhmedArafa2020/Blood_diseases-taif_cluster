@@ -1596,6 +1596,9 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-size: 13px;
   color: #ddd;
 }
+.green-text {
+  color: #91bb4d;
+}
 
 /*--------------------------------------------------------------
 # Responsive Media Queries
