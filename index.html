@@ -62,9 +62,10 @@
         </ul>
       </nav>
       <!-- Right Logo -->
-      <div class="logo right-logo">
+      <div class="right-logo">
         <a href="#intro"><img src="img/qatif.png" alt="Right Logo" /></a>
       </div>
+
     </div>
   </header>
 
@@ -76,8 +77,28 @@
     <div class="intro-container wow fadeIn">
       <h1 class="mb-4 pb-0"><span>International Hematology</span><br>& Hemostasis Conference</h1>
       <p class="mb-4 pb-0">29 April -1 May, Qasr Al Nakheel Hall, Dammam</p>
-      <a href="#" class="venobox play-btn mb-4" data-vbtype="video"
-        data-autoplay="true"></a>
+<!--      <a href="#" class="venobox play-btn mb-4" data-vbtype="video"-->
+<!--        data-autoplay="true"></a>-->
+<!--      <a href="img/promo.mp4" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true">-->
+        <a class="venobox play-btn mb-4"
+           data-vbtype="inline"
+           data-autoplay="true"
+           href="#promo-video">
+          <i class="fa fa-play"></i>
+        </a>
+      <div style="display: none;">
+        <div id="promo-video">
+          <video style="width: 100%; height: auto; max-height: 70vh;" controls autoplay>
+            <source src="img/promo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+
+<!--        <i class="fa fa-play"></i>-->
+<!--      </a>-->
+
       <a href="#about" class="about-btn scrollto">About The Event</a>
     </div>
   </section>
